@@ -1,7 +1,5 @@
 import { useReducer, useEffect, useState, act } from "react";
 import { projectFirestore } from '../firebase/config'
-import { type } from "@testing-library/user-event/dist/type";
-import { error } from "ajv/dist/vocabularies/applicator/dependencies";
 import { timestamp } from "../firebase/config";
 
 let initialState = {
@@ -12,7 +10,7 @@ let initialState = {
 }
 
 const firestoreReducer = (state, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'IS_PENDING':
             return { isPending: true, document: null, success: false, error: null }
         case 'ADDED_DOCUMENT':
