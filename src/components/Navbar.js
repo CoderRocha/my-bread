@@ -14,15 +14,17 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <ul>
+        <Link to={"/"}>
         <img
         src={myBreadIcon}
         />
+        </Link>
         <li className={styles.title}>myBread</li>
 
         {!user && (
           <>
-            <li><Link to={"/login"}>Login</Link></li>
-            <li><Link to={"/signup"}>Sign up</Link></li>
+            <li className="links"><Link to={"/login"}>Login</Link></li>
+            <li className="links"><Link to={"/signup"}>Sign up</Link></li>
           </>
         )}
 
