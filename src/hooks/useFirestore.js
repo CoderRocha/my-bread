@@ -66,6 +66,7 @@ export const useFirestore = (collection) => {
     }
 
     useEffect(() => {
+        setIsCanceled(false);
         return () => setIsCanceled(true)
     }, [])
 

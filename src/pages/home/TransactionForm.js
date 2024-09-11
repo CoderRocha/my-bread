@@ -18,13 +18,11 @@ export default function TransactionForm({ uid }) {
 
     // reset forms after successfully added transaction to database
     useEffect(() => {
-        console.log('Response success:', response.success)
         if (response.success) {
-            // Reset forms if response.success is true
-            setName('')
-            setAmount('')
+          setName('')
+          setAmount('')
         }
-    }, [response.success])
+      }, [response.success])
 
   return (
     <>
