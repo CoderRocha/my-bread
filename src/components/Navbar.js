@@ -14,11 +14,9 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <ul>
-        <Link to={"/"}>
         <img
         src={myBreadIcon}
         />
-        </Link>
         <li className={styles.title}>myBread</li>
 
         {!user && (
