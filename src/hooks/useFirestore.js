@@ -26,14 +26,14 @@ const firestoreReducer = (state, action) => {
 
 export const useFirestore = (collection) => {
     const [response, dispatch] = useReducer(firestoreReducer, initialState)
-    const [isCanceled, setIsCanceled] = useState(false)
+    const [isCancelled, setIsCancelled] = useState(false)
 
     // collection reference in Firebase
     const ref = projectFirestore.collection(collection)
 
     // only dispatch if not cancelled
     const dispatchIfNotCancelled = (action) => {
-        if(!isCanceled) {
+        if(!isCancelled) {
             dispatch(action)
         }
     }
@@ -66,8 +66,8 @@ export const useFirestore = (collection) => {
     }
 
     useEffect(() => {
-        setIsCanceled(false);
-        return () => setIsCanceled(true)
+        setIsCancelled(false);
+        return () => setIsCancelled(true)
     }, [])
 
     return { addDocument, deleteDocument, response}

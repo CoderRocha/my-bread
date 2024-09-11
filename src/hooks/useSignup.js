@@ -4,7 +4,7 @@ import { useAuthContext } from './useAuthContext'
 import { useEffect } from "react"
 
 export const useSignup = () => {
-    const [isCanceled, setIsCanceled] = useState(false)
+    const [isCancelled, setIsCancelled] = useState(false)
     const [error, setError] = useState(null)
     const [isPending, setIsPending] = useState(false)
     const { dispatch } = useAuthContext()
@@ -29,13 +29,13 @@ export const useSignup = () => {
             dispatch({ type: 'LOGIN', payload: res.user })
 
             // update state
-            if (!isCanceled) {
+            if (!isCancelled) {
                 setIsPending(false)
                 setError(null)
             }
         }
         catch (err) {
-            if (!isCanceled) {
+            if (!isCancelled) {
                 console.log(err.message)
                 setError(err.message)
                 setIsPending(false)
@@ -44,8 +44,8 @@ export const useSignup = () => {
     }
 
     useEffect(() => {
-        setIsCanceled(false);
-        return () => setIsCanceled(true);
+        setIsCancelled(false);
+        return () => setIsCancelled(true);
 }, [])
 
     return { error, isPending, signup }
