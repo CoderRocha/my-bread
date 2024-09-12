@@ -31,6 +31,7 @@ It is very simple and intuitive, so you can track your expenses easily to keep y
 - Login / Sign Up feature
 - Transaction 'Form' so you can add transactions with a 'Name' field and a specific 'Amount' field.
 - Transactions 'List' to display the transactions you've added.
+- Option to delete transactions.
 
 ## Technologies used in this project
 
