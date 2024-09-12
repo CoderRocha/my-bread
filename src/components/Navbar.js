@@ -17,7 +17,7 @@ export default function Navbar() {
         <img
         src={myBreadIcon}
         />
-        <li className={styles.title}>myBread</li>
+        <li className={styles.title}>myBread App</li>
 
         {!user && (
           <>
